@@ -1,7 +1,7 @@
 # 🔎 Lost & Found Portal
 
 A full-stack **Lost & Found Management System** that enables users to **report lost items, list found items, and claim ownership** securely.  
-Built with **Node.js, Express, MongoDB**, and a modular backend architecture.
+Built with **Node.js, Express, MongoDB, React.js**, and a modular backend and frontend architecture.
 
 ---
 
@@ -18,6 +18,7 @@ Built with **Node.js, Express, MongoDB**, and a modular backend architecture.
 ---
 
 ⚙️ Installation & Setup
+
 1️⃣ Clone the repo
 git clone https://github.com/your-username/lost-found-portal.git
 cd lost-found-portal/backend
