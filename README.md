@@ -1,70 +1,88 @@
-# Getting Started with Create React App
+# 🔎 Lost & Found Portal
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A full-stack **Lost & Found Management System** that enables users to **report lost items, list found items, and claim ownership** securely.  
+Built with **Node.js, Express, MongoDB**, and a modular backend architecture.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## 🚀 Features
 
-### `npm start`
+- 👤 **User Authentication** (Sign up / Login / JWT-based sessions)  
+- 🧾 **Report Lost Items** with title, description, location, and date  
+- 📦 **List Found Items** and mark them as available  
+- 🔗 **Claim Process** for users to request item ownership  
+- 🔒 **Role-based Access Control** (User / Moderator)  
+- ⚡ **Optimized Search** (by name, category, location, date)  
+- 🛡️ **Data Security** with password hashing and input validation  
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+---
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+⚙️ Installation & Setup
+1️⃣ Clone the repo
+git clone https://github.com/your-username/lost-found-portal.git
+cd lost-found-portal/backend
 
-### `npm test`
+2️⃣ Install dependencies
+npm install
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+3️⃣ Environment Variables
 
-### `npm run build`
+Create a .env file in /backend:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+MONGO_URI=mongodb+srv://<username>:<password>@cluster.mongodb.net/lostfound
+JWT_SECRET=yourSecretKey
+PORT=3000
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+4️⃣ Run the server
+npm start
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Server will run at:
+👉 http://localhost:3000
 
-### `npm run eject`
+| Method | Endpoint           | Description             |
+| ------ | ------------------ | ----------------------- |
+| POST   | `/api/user/signup` | Register new user       |
+| POST   | `/api/user/login`  | Authenticate user       |
+| POST   | `/api/items`       | Report lost/found item  |
+| GET    | `/api/items`       | Get all items           |
+| GET    | `/api/items/:id`   | Get item by ID          |
+| PUT    | `/api/items/:id`   | Update item status      |
+| DELETE | `/api/items/:id`   | Remove item (moderator) |
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+🧪 Testing
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Run tests with:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+npm test
 
-## Learn More
+---
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+📈 Future Enhancements
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+📸 Image upload for items
 
-### Code Splitting
+📍 Geolocation-based search
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+🔔 Email/SMS notifications when a match is found
 
-### Analyzing the Bundle Size
+📊 Analytics dashboard for moderators
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+---
 
-### Making a Progressive Web App
+🛡️ Security Highlights
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+Passwords stored using bcrypt hashing
 
-### Advanced Configuration
+JWT-based authentication for stateless sessions
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+Middleware for request validation & authorization
 
-### Deployment
+Protection against NoSQL injection & XSS
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+---
 
-### `npm run build` fails to minify
+🤝 Contributing
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Contributions are welcome!
+Fork the repo and submit a PR 🚀
