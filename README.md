@@ -20,8 +20,11 @@ Built with **Node.js, Express, MongoDB, React.js**, and a modular backend and fr
 ⚙️ Installation & Setup
 
 1️⃣ Clone the repo
-git clone https://github.com/your-username/lost-found-portal.git
+git clone https://github.com/Jaivanth9/lost-found-portal.git
+
 cd lost-found-portal/backend
+
+cd lost-found-portal/frontend
 
 2️⃣ Install dependencies
 npm install
